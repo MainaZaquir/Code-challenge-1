@@ -17,4 +17,4 @@ console.log(`Payee (Tax): ${Payee}`);
 console.log(`NHIF Deductions: ${NHIFDeductions}`);
 console.log(`NSSF Deductions: ${NSSFDeductions}`);
 console.log(`Gross Salary: ${GrossSalary}`);
-console.log(`Net Salary: ${NetSalary}`);
+console.log(`Net Salary: ${NetSalary}`);}
