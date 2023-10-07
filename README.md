@@ -32,6 +32,6 @@ This program calculates an individual's net salary based on their basic salary a
 1. Open a terminal or command prompt if you're using windows.
 2. Navigate to the `Code-challenge-1` directory.
 3. Edit the `BasicSalary` and `Benefits` variables in the code with actual values.
-4. Run the program using the command: `challenge-3.js`.
+4. Run the program using the command: `node challenge-3.js`.
 5. The program will calculate and display various salary components, including net salary.
 
