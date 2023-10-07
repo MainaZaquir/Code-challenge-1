@@ -4,26 +4,17 @@ function calculateNetSalary(grossSalary) {
     const NHIF_rate = 0.05;
     const NSSF_rate = 0.06;
 
-    // Calculating deductions and the Net salary
-    const Payee = grossSalary * Paye_rate;
-    const NHIFDeductions = grossSalary * NHIF_rate;
-    const NSSFDeductions = grossSalary * NSSF_rate;
-    const NetSalary = grossSalary - (Payee + NHIFDeductions + NSSFDeductions);
+// Calculating deductions and the Net salary
+const Payee = BasicSalary * Paye_rate;
+const NHIFDeductions = Benefits * NHIF_rate;
+const NSSFDeductions = BasicSalary * NSSF_rate;
+const GrossSalary = BasicSalary + Benefits;
+const NetSalary = GrossSalary - (Payee + NHIFDeductions + NSSFDeductions);
 
-    return {
-        grossSalary,
-        Payee,
-        NHIFDeductions,
-        NSSFDeductions,
-        NetSalary,
-    };
-}
-
-const grossSalary = 50000; // Input gross salary
-const salaryComponents = calculateNetSalary(grossSalary);
-
-console.log(`Gross Salary: ${salaryComponents.grossSalary}`);
-console.log(`Payee (Tax): ${salaryComponents.Payee}`);
-console.log(`NHIF Deductions: ${salaryComponents.NHIFDeductions}`);
-console.log(`NSSF Deductions: ${salaryComponents.NSSFDeductions}`);
-console.log(`Net Salary: ${salaryComponents.NetSalary}`);
+console.log(`Basic Salary: ${BasicSalary}`);
+console.log(`Benefits: ${Benefits}`);
+console.log(`Payee (Tax): ${Payee}`);
+console.log(`NHIF Deductions: ${NHIFDeductions}`);
+console.log(`NSSF Deductions: ${NSSFDeductions}`);
+console.log(`Gross Salary: ${GrossSalary}`);
+console.log(`Net Salary: ${NetSalary}`);

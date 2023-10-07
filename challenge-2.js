@@ -1,7 +1,7 @@
 const speedLimit = 70;
 const demeritPointsPerKmOverSpeedLimit = 1;
 
-function calculateDemeritPoints(speed) {
+function detectSpeed(speed) {
     if (speed <= speedLimit) {
         return 0;
     }
@@ -17,7 +17,7 @@ const readline = require('readline').createInterface({
 });
 
 readline.question('Enter the car speed (km/h): ', (speed) => {
-    const demeritPoints = calculateDemeritPoints(parseInt(speed));
+    const demeritPoints = detectSpeed(parseInt(speed));
     if (demeritPoints > 12) {
         console.log('License suspended');
     } else {
